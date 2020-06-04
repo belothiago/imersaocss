@@ -1,35 +1,149 @@
+/* reset do css */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-image: url('https://mcdn.wallpapersafari.com/medium/29/48/X5QRHr.jpg');
+    background-image: url('https://images5.alphacoders.com/711/711093.jpg');
       background-size: auto 100vh;
-      font-family: calibri;
+      font-family: 'Roboto Mono', monospace;
       height: 100vh;
+      font-size: 12px;
       }
-    .menu {
-      background-color: #DCDCDC;  
-    }
-    .menu ul{
-      display: flex;
-      justify-content: space-around; 
-      
-    }
-    .menu li {
-      list-style: none;
-    }
+
+/* se a tela tiver pelo menos 400px vai carregar estes estilos*/      
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+}
+}
+ 
+/* Breakpoint */
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* breakpoint */
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+header  {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+.menu {
+  background-color: #DCDCDC;  
+  position: fixed;
+  width: 100vw;
+  top: 0;
+
+}
+.menu ul {
+  display: flex;
+  justify-content: space-around; 
+  
+}
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px; 
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+.site-subtitle,
+.site-title {
+  color: black;
+  text-align: center;
+}
+
+.site-title {
+  font-size: 2em;
+  font-family: 'Special Elite', cursive;
+}
+
+.site-subtitle {
+  font-style: italic;
+  font-family: 'Special Elite', cursive;
+  line-height: 1.5em;
+}
+
+.contato,
+.portfolio {
+  padding: 2em;
+  min-height: 100vh;
+}
+
+.contato h2,
+.portfolio h2 {
+  font-family: 'Source Code Pro', monospace;
+  margin-bottom: 1em;
+  font-size: 2em;
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 560px) {
+  .portfolio .grid {
+    grid-template-columns: 240px 240px;
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 260px);
+    align-content: center;
+    justify-content: center;
+    height: calc(100vh - 8em - 48px);
+  }
+}
+
+.portfolio figure {
+  text-align: center;
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 240px;
+  object-fit: cover;
+}
+
+@media (min-width: 1200px) {
+  .img-portfolio {
+    height: 10em;
     
-    a {
-      color: black;
-      text-decoration: none;
-    }
-    
-    a:hover{
-      text-decoration: underline;
-    }
-    .site-subtitle,
-    .site-title {
-      color: black;
-      text-align: center;
-    }
-    .site-subtitle {
-      font-style: italic;
-    }
-    
+  }
+}
+.contato .icons{
+text-align: center;
+}
+.contato a {
+  font-size: 3em;
+}
+.contato a:hover{
+  text-decoration: none;
+  text-shadow: 0px 0px 10px grey
+}
